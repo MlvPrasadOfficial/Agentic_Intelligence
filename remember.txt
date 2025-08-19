@@ -1,7 +1,0 @@
-
-  
-cd intelliflow/backend
-uvicorn app.main:app --reload --port 8000
-
-cd intelliflow/frontend
-npm run dev
