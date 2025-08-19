@@ -1,0 +1,945 @@
+# Agentic AI Project Canvas: "IntelliFlow" - Multi-Agent Workflow Automation Platform
+
+## 🎯 Project Overview
+
+**Project Name:** IntelliFlow - Enterprise-Grade Multi-Agent Workflow Automation System
+
+**Elevator Pitch:** A sophisticated AI-powered platform that orchestrates multiple specialized agents to automate complex business workflows, featuring real-time collaboration, intelligent task routing, and comprehensive observability.
+
+## 🏗️ Architecture & Tech Stack
+
+### Frontend
+- **Framework:** Next.js 14+ with TypeScript
+- **UI Design:** Glassmorphism design system with Tailwind CSS
+- **Components:** 
+  - Real-time agent activity dashboard
+  - Workflow builder with drag-and-drop interface
+  - Chat interface for human-agent interaction
+  - Performance metrics visualization
+- **State Management:** Zustand/Redux Toolkit
+- **Real-time Updates:** WebSockets (Socket.io)
+
+### Backend
+- **Framework:** FastAPI (Python) or Node.js with Express
+- **Database:** PostgreSQL for persistent data, Redis for caching
+- **Message Queue:** RabbitMQ/Celery for async task processing
+- **API Design:** RESTful + GraphQL for complex queries
+
+### AI/ML Stack
+- **LLM:** Local Llama 3.1 (via Ollama or llama.cpp)
+- **Orchestration:** LangChain for agent creation
+- **Workflow Management:** LangGraph for complex multi-agent workflows
+- **Observability:** LangSmith for monitoring, debugging, and analytics
+- **MCP Integration:** Model Context Protocol for tool/function calling
+
+## 🤖 Core Agents & Capabilities
+
+### 1. **Research Agent**
+- Web scraping and information gathering
+- Document analysis and summarization
+- Fact-checking and source validation
+
+### 2. **Code Generation Agent**
+- Generate code snippets based on requirements
+- Code review and optimization suggestions
+- Documentation generation
+
+### 3. **Data Analysis Agent**
+- Process CSV/Excel files
+- Generate insights and visualizations
+- Statistical analysis and reporting
+
+### 4. **Communication Agent**
+- Draft emails and reports
+- Sentiment analysis
+- Multi-language support
+
+### 5. **Task Planning Agent**
+- Break down complex tasks
+- Resource allocation
+- Timeline estimation
+
+## 🎨 Glassmorphism UI Features
+
+### Design Elements
+- **Glass Cards:** Semi-transparent containers with backdrop blur
+- **Gradient Overlays:** Subtle color gradients for depth
+- **Soft Shadows:** Multiple shadow layers for elevation
+- **Micro-animations:** Smooth transitions and hover effects
+- **Dark/Light Mode:** Adaptive glassmorphism for both themes
+
+### Key UI Components
+```
+- Agent Status Cards (real-time activity indicators)
+- Workflow Canvas (visual workflow builder)
+- Performance Dashboard (glassmorphic charts)
+- Chat Interface (floating glass panels)
+- Settings Panel (layered glass sheets)
+```
+
+## 🔄 Workflow Examples
+
+### Use Case 1: Market Research Automation
+1. User inputs company/product name
+2. Research Agent gathers competitor data
+3. Data Analysis Agent processes findings
+4. Communication Agent generates report
+5. Task Planning Agent suggests action items
+
+### Use Case 2: Code Documentation Pipeline
+1. User uploads codebase
+2. Code Generation Agent analyzes structure
+3. Documentation templates created
+4. Review and approval workflow
+5. Auto-deployment to documentation site
+
+### Use Case 3: Customer Support Automation
+1. Incoming support ticket analyzed
+2. Relevant agents activated based on issue type
+3. Solution proposed with confidence score
+4. Human approval step if confidence < threshold
+5. Response sent and ticket updated
+
+## 🛠️ Implementation Roadmap
+
+### Phase 1: Foundation (Week 1-2)
+- [ ] Set up development environment
+- [ ] Configure Llama 3.1 locally
+- [ ] Basic FastAPI/Express backend
+- [ ] Initial Next.js setup with Glassmorphism theme
+
+### Phase 2: Core Infrastructure (Week 3-4)
+- [ ] Implement LangChain agents
+- [ ] Set up LangGraph workflows
+- [ ] Integrate LangSmith monitoring
+- [ ] MCP protocol implementation
+
+### Phase 3: Frontend Development (Week 5-6)
+- [ ] Glassmorphism component library
+- [ ] Workflow builder interface
+- [ ] Real-time dashboard
+- [ ] Agent chat interface
+
+### Phase 4: Integration & Testing (Week 7-8)
+- [ ] End-to-end workflow testing
+- [ ] Performance optimization
+- [ ] Error handling and fallbacks
+- [ ] Documentation
+
+## 📊 Key Features to Highlight
+
+### For Technical Interviews
+1. **Scalability:** Microservices architecture with queue-based processing
+2. **Observability:** Comprehensive logging and monitoring with LangSmith
+3. **Security:** API authentication, rate limiting, input validation
+4. **Performance:** Caching strategies, optimized LLM inference
+5. **Testing:** Unit tests, integration tests, load testing
+
+### For Product/Design Interviews
+1. **User Experience:** Intuitive workflow builder
+2. **Real-time Feedback:** Live agent status updates
+3. **Customization:** Configurable agent behaviors
+4. **Analytics:** Detailed performance metrics
+5. **Accessibility:** WCAG compliant glassmorphism
+
+## 🚀 Deployment & DevOps
+
+- **Containerization:** Docker for all services
+- **Orchestration:** Kubernetes or Docker Compose
+- **CI/CD:** GitHub Actions or GitLab CI
+- **Monitoring:** Prometheus + Grafana
+- **Logging:** ELK Stack or similar
+
+## 📈 Metrics & KPIs
+
+- Agent response time
+- Workflow completion rate
+- Error/retry rates
+- User satisfaction scores
+- Cost per workflow execution
+- System uptime and reliability
+
+## 🎯 Interview Talking Points
+
+1. **Problem Solving:** "I identified that businesses struggle with complex workflow automation..."
+2. **Technical Depth:** "The multi-agent architecture allows for specialized task handling..."
+3. **Design Thinking:** "The glassmorphism UI provides intuitive visual feedback..."
+4. **Scalability:** "The system can handle enterprise-level loads through..."
+5. **Innovation:** "Using MCP protocol enables seamless tool integration..."
+
+## 💡 Advanced Features (Stretch Goals)
+
+- Multi-tenant architecture
+- Custom agent creation interface
+- Workflow marketplace
+- Integration with popular business tools
+- Mobile app with React Native
+- Voice interface for agent interaction
+
+## 📚 Documentation Plan
+
+- API documentation (OpenAPI/Swagger)
+- User guide with video tutorials
+- Developer documentation
+- Architecture decision records (ADRs)
+- Deployment guide
+
+Here's the complete user flow and experience for the IntelliFlow project:
+
+## **Home UI Overview**
+
+When users land on IntelliFlow, they see a stunning glassmorphic dashboard with:
+
+### **Hero Section**
+- Floating glass card with "Create New Workflow" button
+- Real-time agent status indicators (5 colored orbs showing agent availability)
+- Welcome message: "Automate complex tasks with AI agents"
+
+### **Main Dashboard Layout**
+1. **Left Sidebar (Glass Panel)**
+   - Recent Workflows
+   - Saved Templates
+   - Agent Library
+   - Analytics
+
+2. **Center Canvas**
+   - Drag-and-drop workflow builder
+   - Live agent activity feed
+   - Quick action buttons
+
+3. **Right Panel**
+   - Chat interface to interact with agents
+   - Workflow execution logs
+   - Performance metrics
+
+## **User Journey**
+
+### **Step 1: User Selects a Workflow Type**
+User clicks "Create New Workflow" and chooses from:
+- 🔍 **Market Research** - "Analyze competitors and market trends"
+- 💻 **Code Documentation** - "Generate docs for your codebase"
+- 🎯 **Customer Support** - "Automate support ticket responses"
+- ➕ **Custom Workflow** - "Build your own agent pipeline"
+
+### **Step 2: Input Configuration**
+**For Market Research:**
+- User enters: Company name, industry, specific questions
+- Uploads: Any existing documents or data
+- Sets: Depth of research (Quick/Standard/Deep)
+
+### **Step 3: Workflow Visualization**
+User sees their workflow come alive:
+```
+[Input] → [Research Agent 🔍] → [Data Agent 📊] → [Communication Agent ✍️] → [Planning Agent 📋] → [Output]
+```
+- Each agent shows real-time status (Idle/Working/Complete)
+- Progress bar shows overall completion
+- Estimated time remaining
+
+### **Step 4: Real-time Execution**
+As the workflow runs, users see:
+- **Live Updates**: "Research Agent found 15 competitors..."
+- **Agent Chat**: Can intervene and guide agents
+- **Partial Results**: Preview data as it's generated
+- **Vector DB Activity**: "Storing 127 insights for future use..."
+
+### **Step 5: Results Delivery**
+**Market Research Output:**
+- Executive summary (1-page)
+- Detailed competitor analysis
+- SWOT analysis
+- Market trends visualization
+- Actionable recommendations
+- Downloadable PDF report
+
+### **What Users Get**
+
+1. **Immediate Value**
+   - Save 5-10 hours on research tasks
+   - Professional-grade outputs
+   - Consistent quality
+
+2. **Intelligence Features**
+   - All data stored in vector DB for future queries
+   - Agents learn from previous workflows
+   - Can ask follow-up questions to any agent
+
+3. **Collaboration Tools**
+   - Share workflows with team
+   - Export to various formats
+   - Integration webhooks
+
+4. **Monitoring Dashboard**
+   - Token usage and costs
+   - Agent performance metrics
+   - Workflow success rates
+   - LangSmith traces for debugging
+
+### **Example User Success Story**
+
+**Sarah, Product Manager** needs competitor analysis:
+1. Inputs "Analyze top 5 CRM competitors"
+2. Watches Research Agent gather data (2 min)
+3. Sees Data Agent create comparison charts (1 min)
+4. Reviews draft report from Communication Agent
+5. Gets final action plan from Planning Agent
+6. **Total time: 5 minutes** vs 5 hours manual work
+
+### **Key Differentiators Users Experience**
+
+- **Visual Feedback**: See agents "thinking" with animated glassmorphic cards
+- **Interruptible**: Can pause, modify, or redirect agents mid-workflow
+- **Memory**: System remembers previous analyses via vector DB
+- **Transparent**: Full LangSmith monitoring shows exactly what agents did
+- **Reliable**: Local Llama 3.1 means no API rate limits or downtime
+
+The home UI essentially presents a **"mission control"** for business automation where users feel in control while AI agents do the heavy lifting.
+
+
+You're right - let me clarify where MCP and LangGraph are actually used in the project flow:
+
+## **Where MCP (Model Context Protocol) Fits**
+
+### **MCP Integration Points:**
+
+1. **Tool Registry** - When workflow starts:
+   ```
+   User Input → MCP Server → Register Available Tools:
+   - Web search tool
+   - Database query tool  
+   - File system access
+   - API connectors
+   - Calculator tool
+   ```
+
+2. **Agent Tool Access** - During execution:
+   ```
+   Research Agent needs web search →
+   MCP Protocol Request →
+   Tool Execution →
+   Results back to Agent
+   ```
+
+3. **In the UI**: Users see a "Connected Tools" panel showing:
+   - ✅ Web Search (via MCP)
+   - ✅ Database Access (via MCP)
+   - ✅ File Operations (via MCP)
+   - ⚡ Custom Tools (user can add via MCP)
+
+## **Where LangGraph Controls Everything**
+
+### **LangGraph is the Orchestration Brain:**
+
+1. **Workflow Definition** - When user selects "Market Research":
+   ```python
+   # This is what happens behind the scenes
+   workflow = StateGraph(WorkflowState)
+   
+   # LangGraph nodes
+   workflow.add_node("input_validation", validate_input)
+   workflow.add_node("research_agent", run_research_agent)
+   workflow.add_node("data_agent", run_data_analysis)
+   workflow.add_node("communication_agent", generate_report)
+   workflow.add_node("planning_agent", create_action_items)
+   
+   # LangGraph edges (the flow logic)
+   workflow.add_edge("input_validation", "research_agent")
+   workflow.add_conditional_edges(
+       "research_agent",
+       route_based_on_confidence,
+       {
+           "needs_more_data": "research_agent",  # Loop back
+           "success": "data_agent"
+       }
+   )
+   ```
+
+2. **Visual Representation in UI**:
+   - User sees workflow as connected nodes
+   - **Each node = LangGraph node**
+   - **Each arrow = LangGraph edge**
+   - **Conditional paths shown as branching arrows**
+
+3. **Real-time Status Updates**:
+   ```
+   LangGraph State Updates →
+   WebSocket →
+   UI Shows: "Research Agent: Analyzing competitor #3..."
+   ```
+
+## **Actual User Experience Example**
+
+### **Home Screen Workflow Creation:**
+
+1. **User clicks "Create Market Research Workflow"**
+   
+2. **Behind the scenes:**
+   - LangGraph loads the workflow template
+   - MCP connects required tools
+   
+3. **User sees:**
+   ```
+   Workflow Designer (powered by LangGraph):
+   
+   [Start] → [Research Agent] → [Decision Point] → [Data Agent] → [Report]
+                    ↓                                    ↓
+              (uses MCP tools)                    (uses MCP tools)
+   ```
+
+4. **During execution, user sees:**
+   - "Research Agent is using Web Search tool (MCP)" 
+   - "Confidence: 65% - rerouting back for more data (LangGraph decision)"
+   - "Data Agent is accessing database via MCP"
+
+5. **In the logs panel:**
+   ```
+   [LangGraph] State transition: research → data_analysis
+   [MCP] Tool call: web_search("competitor pricing 2024")
+   [LangGraph] Conditional edge triggered: confidence > 0.8
+   [MCP] Tool call: database_query("SELECT * FROM market_data")
+   ```
+
+## **Key Integration Points Visible to User:**
+
+1. **Workflow Builder** = Visual LangGraph editor
+   - Drag agents (nodes)
+   - Connect with arrows (edges)
+   - Set conditions (conditional edges)
+
+2. **Tools Panel** = MCP tool registry
+   - Enable/disable tools
+   - Add custom tools
+   - See tool usage in real-time
+
+3. **Execution Monitor** = LangGraph state machine visualizer
+   - Current active node highlighted
+   - Path taken through workflow
+   - State data at each step
+
+**In summary**: 
+- **LangGraph** = The brain that controls the workflow logic and agent coordination
+- **MCP** = The hands that give agents access to external tools and capabilities
+- **User sees both** through visual workflow builder and real-time execution monitoring
+
+
+# Claude Code Instructions: Building IntelliFlow - Agentic AI Platform
+
+## Project Setup Instructions
+
+Create a new project called "IntelliFlow" - an enterprise-grade multi-agent workflow automation system using FastAPI, LangChain, LangGraph, local Llama 3.1, MCP, and glassmorphism UI with LangSmith monitoring.
+
+## Directory Structure
+
+```
+intelliflow/
+├── backend/
+│   ├── app/
+│   │   ├── __init__.py
+│   │   ├── main.py
+│   │   ├── config.py
+│   │   ├── agents/
+│   │   │   ├── __init__.py
+│   │   │   ├── research_agent.py
+│   │   │   ├── code_agent.py
+│   │   │   ├── data_agent.py
+│   │   │   ├── communication_agent.py
+│   │   │   └── planning_agent.py
+│   │   ├── workflows/
+│   │   │   ├── __init__.py
+│   │   │   ├── base_workflow.py
+│   │   │   ├── market_research.py
+│   │   │   ├── code_documentation.py
+│   │   │   └── customer_support.py
+│   │   ├── api/
+│   │   │   ├── __init__.py
+│   │   │   ├── routes/
+│   │   │   ├── dependencies.py
+│   │   │   └── websocket.py
+│   │   ├── models/
+│   │   │   ├── __init__.py
+│   │   │   ├── database.py
+│   │   │   └── schemas.py
+│   │   ├── services/
+│   │   │   ├── __init__.py
+│   │   │   ├── llm_service.py
+│   │   │   ├── mcp_service.py
+│   │   │   └── langsmith_service.py
+│   │   └── utils/
+│   ├── tests/
+│   ├── requirements.txt
+│   └── .env
+├── frontend/
+│   ├── src/
+│   ├── public/
+│   ├── package.json
+│   └── next.config.js
+├── docker-compose.yml
+└── README.md
+```
+
+## Backend Implementation Steps
+
+### Step 1: Initialize FastAPI Project
+
+Create `backend/requirements.txt`:
+```
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+langchain==0.1.0
+langgraph==0.0.26
+langsmith==0.0.77
+ollama==0.1.7
+sqlalchemy==2.0.23
+alembic==1.12.1
+pydantic==2.5.0
+python-dotenv==1.0.0
+redis==5.0.1
+celery==5.3.4
+websockets==12.0
+httpx==0.25.2
+psycopg2-binary==2.9.9
+python-multipart==0.0.6
+```
+
+Create `backend/app/config.py`:
+```python
+from pydantic_settings import BaseSettings
+from typing import Optional
+
+class Settings(BaseSettings):
+    # API Settings
+    api_title: str = "IntelliFlow API"
+    api_version: str = "1.0.0"
+    
+    # Database
+    database_url: str
+    redis_url: str
+    
+    # LLM Settings
+    llama_model: str = "llama3.1"
+    ollama_base_url: str = "http://localhost:11434"
+    
+    # LangSmith
+    langsmith_api_key: Optional[str] = None
+    langsmith_project: str = "intelliflow"
+    
+    # MCP Settings
+    mcp_server_url: Optional[str] = None
+    
+    class Config:
+        env_file = ".env"
+```
+
+### Step 2: Create Base Agent Structure
+
+Create `backend/app/agents/base_agent.py`:
+```python
+from langchain.agents import AgentExecutor
+from langchain.memory import ConversationBufferMemory
+from langsmith import Client
+from typing import Dict, Any, Optional
+import uuid
+
+class BaseAgent:
+    def __init__(self, name: str, description: str, tools: list = None):
+        self.name = name
+        self.description = description
+        self.tools = tools or []
+        self.agent_id = str(uuid.uuid4())
+        self.memory = ConversationBufferMemory()
+        self.langsmith_client = Client()
+        
+    async def execute(self, input_data: Dict[str, Any]) -> Dict[str, Any]:
+        # Implementation with LangSmith tracking
+        pass
+```
+
+### Step 3: Implement LangGraph Workflows
+
+Create detailed LangGraph workflow plan in `backend/app/workflows/base_workflow.py`:
+
+```python
+from langgraph.graph import StateGraph, END
+from typing import TypedDict, Annotated, Sequence
+from langchain_core.messages import BaseMessage
+import operator
+
+class WorkflowState(TypedDict):
+    messages: Annotated[Sequence[BaseMessage], operator.add]
+    current_agent: str
+    workflow_status: str
+    results: dict
+    errors: list
+    metadata: dict
+
+class BaseWorkflow:
+    def __init__(self, workflow_name: str):
+        self.workflow_name = workflow_name
+        self.graph = StateGraph(WorkflowState)
+        self.setup_nodes()
+        self.setup_edges()
+        
+    def setup_nodes(self):
+        # Define nodes for each agent
+        pass
+        
+    def setup_edges(self):
+        # Define conditional routing logic
+        pass
+```
+
+## LangGraph Workflow Plans
+
+### 1. Market Research Workflow
+
+Create `backend/app/workflows/market_research.py`:
+
+```python
+# Workflow nodes:
+# 1. START -> Input Validation
+# 2. Research Agent -> Gather competitor data
+# 3. Data Analysis Agent -> Process findings
+# 4. Communication Agent -> Generate report
+# 5. Planning Agent -> Create action items
+# 6. Quality Check -> Validate results
+# 7. END -> Return results
+
+# Conditional edges:
+# - If validation fails -> END with error
+# - If research confidence < 0.7 -> Loop back to Research
+# - If quality check fails -> Route to human review
+# - Otherwise -> Continue to next node
+```
+
+### 2. Code Documentation Workflow
+
+```python
+# Workflow nodes:
+# 1. START -> Code Upload Handler
+# 2. Code Agent -> Analyze codebase structure
+# 3. Planning Agent -> Create documentation plan
+# 4. Code Agent -> Generate documentation
+# 5. Communication Agent -> Format and polish
+# 6. Review Gate -> Check quality
+# 7. END -> Deploy documentation
+
+# Conditional routing:
+# - Large codebase -> Parallel processing branches
+# - Missing dependencies -> Fetch additional context
+# - Review rejection -> Loop back with feedback
+```
+
+### 3. Customer Support Workflow
+
+```python
+# Workflow nodes:
+# 1. START -> Ticket Classifier
+# 2. Router -> Determine agent type needed
+# 3. Specialized Agent -> Process based on type
+# 4. Communication Agent -> Draft response
+# 5. Confidence Checker -> Evaluate solution
+# 6. Human Approval (conditional)
+# 7. END -> Send response
+
+# Dynamic routing based on:
+# - Ticket category (technical/billing/general)
+# - Urgency level
+# - Customer tier
+# - Confidence threshold
+```
+
+### Step 4: Implement LangSmith Monitoring
+
+Create `backend/app/services/langsmith_service.py`:
+
+```python
+from langsmith import Client
+from functools import wraps
+import traceback
+
+class LangSmithMonitor:
+    def __init__(self, api_key: str, project: str):
+        self.client = Client(api_key=api_key)
+        self.project = project
+    
+    def trace_agent(self, agent_name: str):
+        def decorator(func):
+            @wraps(func)
+            async def wrapper(*args, **kwargs):
+                run = self.client.create_run(
+                    name=f"{agent_name}_execution",
+                    run_type="agent",
+                    project_name=self.project,
+                    inputs={"args": str(args), "kwargs": kwargs}
+                )
+                try:
+                    result = await func(*args, **kwargs)
+                    self.client.update_run(
+                        run.id,
+                        outputs={"result": result},
+                        end_time=datetime.now()
+                    )
+                    return result
+                except Exception as e:
+                    self.client.update_run(
+                        run.id,
+                        error=str(e),
+                        end_time=datetime.now()
+                    )
+                    raise
+            return wrapper
+        return decorator
+    
+    def trace_workflow(self, workflow_name: str):
+        # Similar implementation for workflow tracing
+        pass
+```
+
+### Step 5: Create FastAPI Endpoints
+
+Create `backend/app/main.py`:
+
+```python
+from fastapi import FastAPI, WebSocket, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
+from contextlib import asynccontextmanager
+import uvicorn
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # Initialize Ollama connection
+    # Set up LangSmith monitoring
+    # Initialize MCP server
+    yield
+    # Cleanup
+
+app = FastAPI(
+    title="IntelliFlow API",
+    version="1.0.0",
+    lifespan=lifespan
+)
+
+# CORS for frontend
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:3000"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+# Health check
+@app.get("/health")
+async def health_check():
+    return {"status": "healthy"}
+
+# Workflow endpoints
+@app.post("/api/workflows/execute")
+async def execute_workflow(workflow_type: str, input_data: dict):
+    # Execute selected workflow with LangSmith tracking
+    pass
+
+# WebSocket for real-time updates
+@app.websocket("/ws/{client_id}")
+async def websocket_endpoint(websocket: WebSocket, client_id: str):
+    # Handle real-time agent status updates
+    pass
+
+# Agent management endpoints
+@app.get("/api/agents")
+async def list_agents():
+    # Return available agents and their status
+    pass
+
+@app.post("/api/agents/{agent_id}/execute")
+async def execute_agent(agent_id: str, task: dict):
+    # Execute specific agent task
+    pass
+```
+
+### Step 6: Implement MCP Integration
+
+Create `backend/app/services/mcp_service.py`:
+
+```python
+# MCP (Model Context Protocol) for tool integration
+class MCPService:
+    def __init__(self, server_url: str):
+        self.server_url = server_url
+        
+    async def register_tool(self, tool_definition: dict):
+        # Register custom tools with MCP
+        pass
+        
+    async def execute_tool(self, tool_name: str, parameters: dict):
+        # Execute MCP-registered tools
+        pass
+```
+
+### Step 7: Database Models
+
+Create `backend/app/models/database.py`:
+
+```python
+from sqlalchemy import create_engine, Column, String, JSON, DateTime
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import sessionmaker
+
+Base = declarative_base()
+
+class WorkflowExecution(Base):
+    __tablename__ = "workflow_executions"
+    
+    id = Column(String, primary_key=True)
+    workflow_type = Column(String)
+    status = Column(String)
+    input_data = Column(JSON)
+    output_data = Column(JSON)
+    langsmith_run_id = Column(String)
+    created_at = Column(DateTime)
+    completed_at = Column(DateTime)
+
+class AgentActivity(Base):
+    __tablename__ = "agent_activities"
+    
+    id = Column(String, primary_key=True)
+    agent_id = Column(String)
+    agent_type = Column(String)
+    task = Column(JSON)
+    result = Column(JSON)
+    execution_time = Column(Float)
+    created_at = Column(DateTime)
+```
+
+## Frontend Glassmorphism UI Instructions
+
+### Step 1: Initialize Next.js with TypeScript
+
+```bash
+npx create-next-app@latest frontend --typescript --tailwind --app
+cd frontend
+npm install framer-motion lucide-react @radix-ui/react-dialog recharts
+```
+
+### Step 2: Create Glassmorphism Theme
+
+Create `frontend/src/styles/glassmorphism.css`:
+
+```css
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 
+    0 8px 32px 0 rgba(31, 38, 135, 0.37),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.glass-dark {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+```
+
+### Step 3: Create Components
+
+Create glassmorphic components:
+- `AgentCard.tsx` - Display agent status
+- `WorkflowBuilder.tsx` - Drag-drop workflow creator
+- `MetricsDashboard.tsx` - Real-time metrics
+- `ChatInterface.tsx` - Human-agent interaction
+
+## Deployment Instructions
+
+### Docker Setup
+
+Create `docker-compose.yml`:
+
+```yaml
+version: '3.8'
+services:
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: intelliflow
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: secure_password
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      
+  redis:
+    image: redis:7-alpine
+    
+  ollama:
+    image: ollama/ollama
+    volumes:
+      - ollama_data:/root/.ollama
+    command: serve
+    
+  backend:
+    build: ./backend
+    depends_on:
+      - postgres
+      - redis
+      - ollama
+    environment:
+      - DATABASE_URL=postgresql://admin:secure_password@postgres/intelliflow
+      - REDIS_URL=redis://redis:6379
+      - OLLAMA_BASE_URL=http://ollama:11434
+      
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+      
+volumes:
+  postgres_data:
+  ollama_data:
+```
+
+## Development Workflow
+
+1. First, ensure Ollama is running with Llama 3.1:
+   ```bash
+   ollama pull llama3.1
+   ollama serve
+   ```
+
+2. Set up environment variables in `.env`:
+   ```
+   DATABASE_URL=postgresql://localhost/intelliflow
+   REDIS_URL=redis://localhost:6379
+   LANGSMITH_API_KEY=your_key_here
+   LANGSMITH_PROJECT=intelliflow
+   ```
+
+3. Run FastAPI backend:
+   ```bash
+   cd backend
+   uvicorn app.main:app --reload --port 8000
+   ```
+
+4. Run Next.js frontend:
+   ```bash
+   cd frontend
+   npm run dev
+   ```
+
+5. Access LangSmith dashboard to monitor agent executions and workflow performance.
+
+## Testing Instructions
+
+Create comprehensive tests for:
+- Individual agent functionality
+- Workflow execution paths
+- API endpoints
+- WebSocket connections
+- LangSmith integration
+- Error handling scenarios
+
+This structure provides a production-ready, interview-impressive project showcasing all requested technologies with proper monitoring through LangSmith.

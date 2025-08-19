@@ -1,0 +1,2 @@
+- Add to memory : 'Always check for frontend and backend server running issues after completing everything'\
+- "what ever the files created should have proper page doc strings and code comments for each function block and important code blocks to make it easier to read"

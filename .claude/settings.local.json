@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(git init)",
+      "Bash(git add .)",
+      "Bash(git commit:*)",
+      "Bash(git remote add:*)",
+      "Bash(git branch:*)",
+      "Bash(git push:*)",
+      "Bash(pip install:*)",
+      "Bash(python:*)",
+      "Bash(npm install)",
+      "Bash(dir)",
+      "Bash(npm run dev)",
+      "Bash(curl -s http://localhost:3000)",
+      "Bash(npm update:*)",
+      "Bash(npm install:*)",
+      "Bash(for dir in workflows agents chat analytics settings)",
+      "Bash(do sed -i \"s/from-gray-900 via-purple-900 to-blue-900/from-black via-gray-950 to-black/g; s/from-purple-500\\/10 via-blue-500\\/10 to-pink-500\\/10/from-cyan-500\\/5 via-blue-500\\/5 to-purple-500\\/5/g; s/opacity-20/opacity-10/g\" \"$dir/page.tsx\")",
+      "Bash(done)",
+      "Bash(curl:*)",
+      "Bash(mv:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

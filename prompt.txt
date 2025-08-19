@@ -1,0 +1,6 @@
+1 added screen shot of chat page  , make it professional aesthetic
+2 criticize the chat page, yourself for improvee=ment and improvize it 
+3 in the example page for all 6 cases provided, add an examples of each from input , how the agent invoked and what will be example o/p
+4 In home ,just keep only welcome things and info only , remove other things
+5 in the chat page, add a button to clear the chat history
+6 make chat persistent even if i go to other pages
