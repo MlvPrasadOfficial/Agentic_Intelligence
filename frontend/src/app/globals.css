@@ -1,0 +1,241 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 10% 3.9%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom Glassmorphism styles */
+@layer components {
+  .glass {
+    @apply bg-glass-100 backdrop-blur-xl border border-white/20 shadow-glass;
+  }
+  
+  .glass-dark {
+    @apply bg-glass-dark-200 backdrop-blur-xl border border-black/20 shadow-glass-dark;
+  }
+  
+  .glass-card {
+    @apply glass rounded-xl p-6 transition-all duration-300 hover:bg-glass-200 hover:shadow-xl;
+  }
+  
+  .glass-card-dark {
+    @apply glass-dark rounded-xl p-6 transition-all duration-300 hover:bg-glass-dark-300 hover:shadow-xl;
+  }
+  
+  .glass-button {
+    @apply glass rounded-lg px-4 py-2 text-sm font-medium transition-all duration-200 hover:bg-glass-200 hover:scale-105 active:scale-95;
+  }
+  
+  .glass-button-dark {
+    @apply glass-dark rounded-lg px-4 py-2 text-sm font-medium transition-all duration-200 hover:bg-glass-dark-300 hover:scale-105 active:scale-95;
+  }
+  
+  .glass-input {
+    @apply glass rounded-lg px-4 py-2 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50;
+  }
+  
+  .glass-input-dark {
+    @apply glass-dark rounded-lg px-4 py-2 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  backdrop-filter: blur(10px);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* Background gradients */
+.bg-gradient-app {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.bg-gradient-app-dark {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+}
+
+/* Agent status indicators */
+.agent-idle {
+  @apply bg-gray-400/20 border-gray-400/40 text-gray-600;
+}
+
+.agent-working {
+  @apply bg-blue-400/20 border-blue-400/40 text-blue-600 animate-pulse-soft;
+}
+
+.agent-complete {
+  @apply bg-green-400/20 border-green-400/40 text-green-600;
+}
+
+.agent-error {
+  @apply bg-red-400/20 border-red-400/40 text-red-600;
+}
+
+/* Workflow status indicators */
+.workflow-pending {
+  @apply bg-yellow-400/20 border-yellow-400/40 text-yellow-600;
+}
+
+.workflow-running {
+  @apply bg-blue-400/20 border-blue-400/40 text-blue-600 animate-glow;
+}
+
+.workflow-completed {
+  @apply bg-green-400/20 border-green-400/40 text-green-600;
+}
+
+.workflow-failed {
+  @apply bg-red-400/20 border-red-400/40 text-red-600;
+}
+
+/* Loading animations */
+.loading-shimmer {
+  @apply relative overflow-hidden;
+}
+
+.loading-shimmer::before {
+  content: '';
+  @apply absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent animate-shimmer;
+}
+
+/* Floating animations for hero elements */
+.float-delay-1 {
+  animation: float 3s ease-in-out infinite;
+}
+
+.float-delay-2 {
+  animation: float 3s ease-in-out infinite 0.5s;
+}
+
+.float-delay-3 {
+  animation: float 3s ease-in-out infinite 1s;
+}
+
+/* Custom focus styles */
+.focus-glass {
+  @apply focus:outline-none focus:ring-2 focus:ring-blue-400/50 focus:bg-glass-200;
+}
+
+.dark .focus-glass {
+  @apply focus:bg-glass-dark-300;
+}
+
+/* Responsive glassmorphism adjustments */
+@media (max-width: 640px) {
+  .glass, .glass-dark {
+    @apply backdrop-blur-lg; /* Reduce blur on mobile for better performance */
+  }
+  
+  .glass-card, .glass-card-dark {
+    @apply p-4; /* Reduce padding on mobile */
+  }
+}
+
+/* Print styles */
+@media print {
+  .glass, .glass-dark, .glass-card, .glass-card-dark {
+    @apply bg-white border-gray-300 shadow-none;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .glass, .glass-dark {
+    @apply bg-white/90 border-black/50;
+  }
+  
+  .dark .glass, .dark .glass-dark {
+    @apply bg-black/90 border-white/50;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .animate-float, 
+  .animate-pulse-soft, 
+  .animate-glow, 
+  .animate-shimmer {
+    @apply animate-none;
+  }
+  
+  .transition-all,
+  .transition-transform {
+    @apply transition-none;
+  }
+}
